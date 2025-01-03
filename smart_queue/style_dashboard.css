@@ -1,0 +1,320 @@
+/* Generico */
+		* {
+		  box-sizing: border-box;
+		}
+
+		body {
+		  font-family: Arial;
+		  padding: 10px;
+		  background: #f1f1f1;
+		}
+
+
+	/* Top navigation bar*/
+		.topnav {
+		  background-color: #333;
+		}
+		#textTopnav {
+		  padding: 20px;
+		  text-align: center;
+		  color: white;
+		  font-family:Papyrus;
+		  font-size: 20px;
+		}
+	
+
+	/* Colonne, righe, flusso:*/
+		.leftcolumn {   
+		  float: left;
+		  width: 35%;
+		}
+		.rightcolumn {
+		  float: left;
+		  width: 65%;
+		  background-color: #f1f1f1;
+		  padding-left: 20px;
+		}
+
+
+		.leftcolumn2 {   
+		  float: left;
+		  width: 25%;
+		}
+		.centralcolumn2 {   
+		  float: left;
+		  width: 20%;
+		  padding-top: 20px;
+		}
+		.rightcolumn2 {
+		  float: left;
+		  width: 55%;
+		  padding-top: 20px;
+		}
+	
+	
+		.leftcolumn3 {   
+		  float: left;
+		  width: 70%;
+		  background-color: #f1f1f1;
+		  padding-right: 10px;
+		}
+		.rightcolumn3 {
+		  float: left;
+		  width: 30%;
+		  background-color: #f1f1f1;
+		  padding-left: 10px;
+		}
+	
+	
+		.leftcolumn4 {   
+		  float: left;
+		  width: 50%;
+		  
+		}
+		.rightcolumn4 {
+		  float: left;
+		  width: 50%;
+		}
+	
+	
+		.leftcolumn5 {   
+		  float: left;
+		  width: 50%;
+		  padding-bottom: 20px;
+		}
+		.rightcolumn5 {
+		  float: left;
+		  width: 50%;
+		  padding-bottom: 20px;
+		}
+
+		.leftcolumn6 {   
+			float: left;
+			width: 60%;
+			padding-bottom: 20px;
+		  }
+		  .rightcolumn6 {
+			float: left;
+			width: 40%;
+			padding-bottom: 20px;
+		  }
+		
+		/* pulisce il flusso dopo la riga, allineando */
+		.row::after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+	
+	
+	/*Bottoni*/
+	
+		#tresholdSetButton{
+			background:url("matita.png");
+			cursor:pointer;
+			background-repeat:no-repeat;
+			background-position:center center;
+			width:20px;
+			height:20px;
+			border-style: none;
+			background-color:000000;
+		}
+		
+		/*testo in dropdown sopra il bottone di modifica threshold*/
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 150px;
+		  padding: 0px 10px;
+		  z-index: 1;
+		}
+		.rightcolumn2:hover .dropdown-content {
+		  display: block;
+		}
+		
+		#disableAllarmButton{
+			cursor:pointer;
+		}
+		
+	/*Testi*/
+		#headerDisattivaAllarme{
+			text-align: center;
+			padding-bottom: 10px;
+		}
+		
+		#ultimoAggiornamentoText{
+			text-align: right;
+		}
+
+		#graphicsHeader{
+			text-align: center;
+			padding-bottom: 10px;
+		}
+
+		/*#Francesco{
+			text-align: center;
+			color: red;
+		}*/
+		
+	
+	/*forms*/
+		#userSetThreshold{
+			width: 80%;
+		}
+		
+		#visitors{
+		  width: 50%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		}
+		
+		#allarmState{
+			width: 80%;
+		}
+		
+	/*tabelle*/
+		table, th, td {
+		  border: 1px solid;
+		}
+		
+		table {
+		  border-collapse: collapse;
+		  width: 100%;
+		  background-color: white;
+		}
+
+		th {
+		  height: 70px;
+		}
+		
+		tr{
+			height: 20px;
+		}
+	
+	
+	/*modelli*/
+	
+		/* Fake image */
+		.fakeimg {
+		  background-color: #aaa;
+		  /*width: 100%;*/
+		  padding: 20px;
+		}
+
+		/* Add a card effect for articles */
+		.card {
+		  background-color: white;
+		  padding: 20px;
+		  margin-top: 20px;
+		}
+
+
+
+	/* Footer */
+		.footer {
+		  padding: 20px;
+		  text-align: center;
+		  background: #ddd;
+		  margin-top: 20px;
+		}
+
+
+
+
+
+		
+		/*stile header*/
+		header{
+			background-color: #363434; 
+			position: static;
+		}
+		.header .logo{
+				/* Sicuri che sarà sempre tutto a sinistra 
+				Attenzione!: incide sugli elementi circostanti,quindi va sistemato*/
+				text-decoration: none;
+				font-size: 8vh;
+				font-weight: bold;
+			   
+		}
+		
+		a{
+			color: rgb(255, 255, 255);
+		}
+		
+		.header ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+			background-color: #212121;
+		}
+		.header ul a{
+			display: block; /* Per poter cliccare su tutta la riga in cui si trova un elemento, fondamentale su mobile */
+			/*border-right: 1px solid red;*/
+			padding: 10px;
+			text-decoration: none;
+		}
+		
+		.header ul a:hover{
+			background-color: #181818;
+		}
+		.header .menu{
+			clear: both; /* Pulisce il comportamento del float (in both) in tutte le direzioni */
+			max-height: 0; /* Per far scomparire il menù,che poi dovrà comparire alla pressione del pulsante */
+			transition: max-height .2s ease-out;
+		
+		}
+		.header .menu-icon{
+			/* border: 1px solid red;*/ /* Così facendo, potremo cliccare nella zona che non sia la checkbox,triggerando la transizione */
+			 padding: 28px 20px;
+			 position: relative; /* Relative per far si che l'icona effettiva,che andremo a disegnare, sia al suo interno e si riferisca ad esso e non ad altro,essendo che sarà di tipo absolute  */
+			 float: left;
+			 cursor: pointer; /* Per avere la manina del click */
+		 }
+		 
+		 .header .menu-icon .nav-icon{ /* Creazione Prima linea del Menù Hamburger */
+			 background-color: white;
+			 display: block;
+			 width: 18px;
+			 height: 2px;
+			 position: relative;
+			 transition: background-color .2s ease-out;
+		 }
+		 
+		 .header .menu-icon .nav-icon::before,
+		 .header .menu-icon .nav-icon::after{ /* Per evitare codice ridondante, si accorpano, e si separano solo le posizioni top  */
+			 background-color: white;
+			 content: "";
+			 display: block;
+			 width: 100%; /* in questo caso = 18px */
+			 height: 100%; /* in questo caso = 2px */
+			 transition: all .2s ease-out;
+			 position: absolute;
+		 }
+		 .header .menu-icon .nav-icon::before{
+			 top: 5px; /* per far comparire sopra la riga */
+		 }
+		 .header .menu-icon .nav-icon::after{
+			 top: -5px; /* per far comparire sotto la riga */
+		 }
+		 .header .menu-btn{
+			 display: none; /* Nasconde la checkbox, mantenendo il comportamento */
+		 }
+		 
+		 .header .menu-btn:checked ~ .menu { /* Quando la checkbox è checked, l'effetto lo vai a dare su menù (grazie a ~ gli sto dicendo che menù è il sibling */
+			max-height: 290px; 
+		 }
+		 .header .menu-btn:checked ~ .menu-icon .nav-icon{
+			 background-color: transparent;
+			 /* visibility: hidden;*/ /* Per far scomparire gli pseudoelementi */
+		 }
+		 .header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+			transform: rotate(-45deg);
+			top:0; /* Centra la stanghetta in modo da creare una x */
+		 }
+		 .header .menu-btn:checked ~ .menu-icon .nav-icon::after{
+			 transform: rotate(45deg); /* Ruota le stanghette al di sopra e al di sotto dell'icona del menù hamburger */
+			 top:0; /* Centra la stanghetta in modo da creare una x */
+		 }
